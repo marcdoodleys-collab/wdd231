@@ -1,0 +1,41 @@
+/* larger.css — enhancements for wider viewports (loaded after small.css) */
+
+@media screen and (min-width: 700px) {
+  .hamburger {
+    display: none;
+  }
+
+  #primaryNav {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--color-nav);
+  }
+
+  #primaryNav li {
+    flex: 1;
+  }
+
+  #primaryNav li a {
+    border-top: none;
+    text-align: center;
+  }
+
+  #primaryNav li a:hover,
+  #primaryNav li a.active {
+    padding-left: 1.2rem;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+    padding-top: 1.2rem;
+  }
+
+  .intro-grid {
+    grid-template-columns: 2fr 1fr;
+    align-items: stretch;
+  }
+
+  .course-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
