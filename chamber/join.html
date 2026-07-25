@@ -4,11 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Join the Chamber of Commerce of Port-au-Prince</title>
+  <title>Join the Chambre de Commerce de Port-au-Prince</title>
   <meta name="description" content="Rejoignez la Chambre de Commerce de Port-au-Prince : remplissez le formulaire d'adhésion et choisissez votre niveau de membre." />
   <meta name="author" content="Marc-Doodley" />
 
-  <meta property="og:title" content="Join the Chamber of Commerce of Port-au-Prince" />
+  <meta property="og:title" content="Join the Chambre de Commerce de Port-au-Prince" />
   <meta property="og:description" content="Rejoignez la Chambre de Commerce de Port-au-Prince en remplissant le formulaire d'adhésion." />
   <meta property="og:image" content="https://marcdoodleys-collab.github.io/wdd231/chamber/images/chamber.jpg" />
   <meta property="og:url" content="https://marcdoodleys-collab.github.io/wdd231/chamber/join.html" />
@@ -88,15 +88,29 @@
           <input type="text" id="orgName" name="orgName" title="Le nom de votre entreprise ou organisation" autocomplete="organization" required />
         </label>
 
-        <label for="membershipLevel">
-          Niveau d'adhésion
-          <select id="membershipLevel" name="membershipLevel" title="Choisissez votre niveau d'adhésion">
-            <option value="np">Membre à but non lucratif (gratuit)</option>
-            <option value="bronze">Adhésion Bronze</option>
-            <option value="silver">Adhésion Argent</option>
-            <option value="gold">Adhésion Or</option>
-          </select>
-        </label>
+        <fieldset class="membership-fieldset">
+          <legend>Niveau d'adhésion</legend>
+
+          <label class="radio-label" for="levelNp">
+            <input type="radio" id="levelNp" name="membershipLevel" value="np" title="Membre à but non lucratif" required />
+            Membre à but non lucratif (gratuit)
+          </label>
+
+          <label class="radio-label" for="levelBronze">
+            <input type="radio" id="levelBronze" name="membershipLevel" value="bronze" title="Adhésion Bronze" />
+            Adhésion Bronze
+          </label>
+
+          <label class="radio-label" for="levelSilver">
+            <input type="radio" id="levelSilver" name="membershipLevel" value="silver" title="Adhésion Argent" />
+            Adhésion Argent
+          </label>
+
+          <label class="radio-label" for="levelGold">
+            <input type="radio" id="levelGold" name="membershipLevel" value="gold" title="Adhésion Or" />
+            Adhésion Or
+          </label>
+        </fieldset>
 
         <label for="orgDescription">
           Description de l'entreprise

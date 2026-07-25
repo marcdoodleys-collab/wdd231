@@ -653,6 +653,41 @@ footer a {
   color: var(--color-dark);
 }
 
+/* ---------- Fieldset niveau d'adhésion (boutons radio) ---------- */
+
+.membership-fieldset {
+  border: 1px solid var(--color-mid-gray);
+  border-radius: var(--radius);
+  padding: 0.8rem 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.membership-fieldset legend {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--color-dark);
+  padding: 0 0.4rem;
+}
+
+.radio-label {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 400 !important;
+  font-size: 0.95rem !important;
+  cursor: pointer;
+}
+
+.radio-label input[type="radio"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--color-primary);
+  flex-shrink: 0;
+}
+
 .join-form input,
 .join-form select,
 .join-form textarea {
