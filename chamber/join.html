@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Adhésion | Chambre de Commerce de Port-au-Prince</title>
+  <meta name="description" content="Rejoignez la Chambre de Commerce de Port-au-Prince : remplissez le formulaire d'adhésion et choisissez votre niveau de membre." />
+  <meta name="author" content="Marc-Doodley" />
+
+  <meta property="og:title" content="Adhésion | Chambre de Commerce de Port-au-Prince" />
+  <meta property="og:description" content="Rejoignez la Chambre de Commerce de Port-au-Prince en remplissant le formulaire d'adhésion." />
+  <meta property="og:image" content="https://marcdoodleys-collab.github.io/wdd231/chamber/images/chamber.jpg" />
+  <meta property="og:url" content="https://marcdoodleys-collab.github.io/wdd231/chamber/join.html" />
+  <meta property="og:type" content="website" />
+
+  <link rel="icon" href="images/chamber.jpg" />
+
+  <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="stylesheet" href="styles/small.css" />
+  <link rel="stylesheet" href="styles/larger.css" />
+  <script src="scripts/join.js" defer></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <header>
+    <div class="brand">
+      <img src="images/chamber.jpg" alt="Logo de la Chambre de Commerce de Port-au-Prince" class="logo" width="32" height="32" />
+      <span class="site-name">Chambre de Commerce de Port-au-Prince</span>
+    </div>
+
+    <button id="hamburger" class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primaryNav">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <nav>
+    <ul id="primaryNav">
+      <li><a href="index.html" target="_blank">Accueil</a></li>
+      <li><a href="directory.html" target="_blank">Annuaire</a></li>
+      <li><a href="join.html" class="active" aria-current="page" target="_blank">Adhésion</a></li>
+      <li><a href="discover.html" target="_blank">Découvrir</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1>Devenir Membre</h1>
+    <p class="join-intro">Remplissez ce formulaire pour rejoindre la Chambre de Commerce de Port-au-Prince et choisissez le niveau d'adhésion qui correspond à votre entreprise.</p>
+
+    <div class="join-layout">
+
+      <!-- ===== FORMULAIRE ===== -->
+      <form action="thankyou.html" method="get" class="join-form">
+
+        <label for="firstName">
+          Prénom
+          <input type="text" id="firstName" name="firstName" title="Votre prénom" autocomplete="given-name" required />
+        </label>
+
+        <label for="lastName">
+          Nom
+          <input type="text" id="lastName" name="lastName" title="Votre nom de famille" autocomplete="family-name" required />
+        </label>
+
+        <label for="orgTitle">
+          Titre dans l'organisation
+          <input type="text" id="orgTitle" name="orgTitle" title="Votre titre au sein de l'entreprise (minimum 7 caractères, lettres, espaces et tirets uniquement)" autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}" />
+        </label>
+
+        <label for="email">
+          Adresse courriel
+          <input type="email" id="email" name="email" title="Votre adresse courriel" autocomplete="email" placeholder="exemple@entreprise.com" required />
+        </label>
+
+        <label for="mobile">
+          Téléphone mobile
+          <input type="tel" id="mobile" name="mobile" title="Votre numéro de téléphone mobile" autocomplete="tel" required />
+        </label>
+
+        <label for="orgName">
+          Nom de l'entreprise
+          <input type="text" id="orgName" name="orgName" title="Le nom de votre entreprise ou organisation" autocomplete="organization" required />
+        </label>
+
+        <label for="membershipLevel">
+          Niveau d'adhésion
+          <select id="membershipLevel" name="membershipLevel" title="Choisissez votre niveau d'adhésion">
+            <option value="np">Membre à but non lucratif (gratuit)</option>
+            <option value="bronze">Adhésion Bronze</option>
+            <option value="silver">Adhésion Argent</option>
+            <option value="gold">Adhésion Or</option>
+          </select>
+        </label>
+
+        <label for="orgDescription">
+          Description de l'entreprise
+          <textarea id="orgDescription" name="orgDescription" title="Décrivez brièvement votre entreprise"></textarea>
+        </label>
+
+        <input type="hidden" name="timestamp" id="timestamp" />
+
+        <input type="submit" value="Envoyer ma demande d'adhésion" class="cta-btn" />
+      </form>
+
+      <!-- ===== CARTES NIVEAUX D'ADHÉSION ===== -->
+      <div class="membership-cards">
+
+        <article class="membership-card card-np">
+          <h2>Membre NP</h2>
+          <p>Pour les organisations à but non lucratif.</p>
+          <p class="card-price">Gratuit</p>
+          <button class="modal-trigger" data-modal="modalNp">En savoir plus</button>
+        </article>
+
+        <article class="membership-card card-bronze">
+          <h2>Bronze</h2>
+          <p>L'essentiel pour démarrer.</p>
+          <button class="modal-trigger" data-modal="modalBronze">En savoir plus</button>
+        </article>
+
+        <article class="membership-card card-silver">
+          <h2>Argent</h2>
+          <p>Pour les entreprises en croissance.</p>
+          <button class="modal-trigger" data-modal="modalSilver">En savoir plus</button>
+        </article>
+
+        <article class="membership-card card-gold">
+          <h2>Or</h2>
+          <p>Visibilité et avantages maximum.</p>
+          <button class="modal-trigger" data-modal="modalGold">En savoir plus</button>
+        </article>
+
+      </div>
+    </div>
+
+    <!-- ===== MODALS ===== -->
+    <dialog id="modalNp" class="membership-modal">
+      <h2>Membre NP</h2>
+      <p>Réservée aux organisations à but non lucratif, cette adhésion gratuite inclut :</p>
+      <ul>
+        <li>Inscription dans l'annuaire des membres</li>
+        <li>Invitation aux événements de réseautage</li>
+        <li>Accès aux formations gratuites de la Chambre</li>
+      </ul>
+      <button class="modal-close" autofocus>Fermer</button>
+    </dialog>
+
+    <dialog id="modalBronze" class="membership-modal">
+      <h2>Adhésion Bronze</h2>
+      <p>Idéale pour les petites entreprises qui démarrent leur réseau :</p>
+      <ul>
+        <li>Inscription dans l'annuaire des membres</li>
+        <li>Invitation aux événements de réseautage</li>
+        <li>10% de réduction sur les événements payants de la Chambre</li>
+      </ul>
+      <button class="modal-close" autofocus>Fermer</button>
+    </dialog>
+
+    <dialog id="modalSilver" class="membership-modal">
+      <h2>Adhésion Argent</h2>
+      <p>Pour les entreprises qui veulent gagner en visibilité :</p>
+      <ul>
+        <li>Tous les avantages du niveau Bronze</li>
+        <li>Éligibilité aux cartes "membres à l'honneur" sur la page d'accueil</li>
+        <li>Mention dans les publications de la Chambre</li>
+        <li>20% de réduction sur les événements payants</li>
+      </ul>
+      <button class="modal-close" autofocus>Fermer</button>
+    </dialog>
+
+    <dialog id="modalGold" class="membership-modal">
+      <h2>Adhésion Or</h2>
+      <p>Le niveau de visibilité et d'avantages le plus complet :</p>
+      <ul>
+        <li>Tous les avantages du niveau Argent</li>
+        <li>Priorité d'affichage dans les "membres à l'honneur"</li>
+        <li>Accès VIP aux événements et forums économiques</li>
+        <li>30% de réduction sur les événements payants</li>
+      </ul>
+      <button class="modal-close" autofocus>Fermer</button>
+    </dialog>
+
+  </main>
+
+  <footer>
+    <div class="footer-contact">
+      <p>Chambre de Commerce de Port-au-Prince</p>
+      <p>123 Rue Capois, Port-au-Prince, Haïti</p>
+      <p>contact@ccpap.ht &nbsp;|&nbsp; (509) 2222-3333</p>
+    </div>
+
+    <div class="social-links">
+      <a href="https://x.com/Mkdl2002"><img src="images/twitter-x.svg" alt="X profile" width="16" height="16"></a>
+      <a href="https://linkedin.com/in/marc-doodley"><img src="images/linkedin.svg" alt="LinkedIn profile" width="16" height="16"></a>
+      <a href="https://www.instagram.com/marcdoodleys?igsh=MWNpeXg5dWdqZjRjdw=="><img src="images/instagram.svg" alt="Instagram profile" width="16" height="16"></a>
+    </div>
+    <div class="footer-meta">
+      <p>&copy; <span id="copyrightYear"></span> &bull; Marc-Doodley &bull; WDD 231 &bull; Haïti</p>
+      <p id="lastModified"></p>
+      <p><a href="data/members.json" target="_blank" rel="noopener">Voir les données (members.json)</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>

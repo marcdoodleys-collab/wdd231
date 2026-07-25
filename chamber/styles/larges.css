@@ -123,3 +123,24 @@
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+/* ================================
+   PAGE ADHÉSION — écrans larges
+   ================================ */
+
+@media screen and (min-width: 900px) {
+  .join-layout {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .join-form {
+    flex: 2;
+  }
+
+  .membership-cards {
+    flex: 1;
+    grid-template-columns: 1fr 1fr;
+    align-content: start;
+  }
+}
