@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pet Haven | Individual Project Site Plan | WDD 231</title>
+  <meta name="description" content="Site plan document for Pet Haven, an online pet store and animal care center: purpose, scenarios, color scheme, typography, wireframes, and page structure." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/siteplan.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="brand">
+      <svg class="brand__mark" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="32" cy="32" r="31" fill="#e8a33d" />
+        <ellipse cx="32" cy="40" rx="14" ry="11" fill="#1f3d2b" />
+        <ellipse cx="18" cy="24" rx="6" ry="7.5" fill="#1f3d2b" />
+        <ellipse cx="46" cy="24" rx="6" ry="7.5" fill="#1f3d2b" />
+        <ellipse cx="24.5" cy="14.5" rx="5" ry="6.2" fill="#1f3d2b" />
+        <ellipse cx="39.5" cy="14.5" rx="5" ry="6.2" fill="#1f3d2b" />
+      </svg>
+      <div class="brand__text">
+        <h1>Pet Haven</h1>
+        <p>Individual Project Site Plan — WDD 231</p>
+      </div>
+    </div>
+  </header>
+
+  <section class="plan-intro">
+    <h2>Site plan</h2>
+    <p>This document lays out the subject, purpose, target-user scenarios, color scheme, typography, wireframes, and page structure that will guide the design and development of the Pet Haven project.</p>
+  </section>
+
+  <main id="main-content">
+
+    <!-- SITE NAME -->
+    <section class="plan-section" aria-labelledby="site-name-heading">
+      <p class="plan-section__label">Identity</p>
+      <h2 id="site-name-heading">Site Name</h2>
+      <p><strong>Pet Haven</strong> — an online pet store and animal care center.</p>
+      <p>The name was chosen because it communicates safety, comfort, and belonging in two short words. "Haven" signals that this is a trustworthy place where an animal's wellbeing comes first, while "Pet" keeps the subject immediately clear to a first-time visitor. The name is also short, easy to say out loud, and easy to remember when a customer wants to recommend the site to a friend.</p>
+      <div class="example-box">
+        <p class="example-box__tag">Optional domain</p>
+        <p>pethaven.org</p>
+      </div>
+    </section>
+
+    <!-- SITE PURPOSE -->
+    <section class="plan-section" aria-labelledby="site-purpose-heading">
+      <p class="plan-section__label">Scope</p>
+      <h2 id="site-purpose-heading">Site Purpose</h2>
+      <p>Pet Haven provides a single hub where visitors can browse pets currently available for adoption or purchase, read species-specific care guidance, and reach the store directly with adoption inquiries or general questions. Pet information is pulled dynamically from a local JSON data source so the catalog can grow without rebuilding the page, and the layout adapts responsively from a phone screen up to a desktop browser.</p>
+    </section>
+
+    <!-- SCENARIOS -->
+    <section class="plan-section" aria-labelledby="scenarios-heading">
+      <p class="plan-section__label">Target audience</p>
+      <h2 id="scenarios-heading">Scenarios</h2>
+      <p>Scenarios represent the questions a prospective pet owner — the site's core audience — would bring to Pet Haven. They shape what content the site needs to include.</p>
+      <ul class="scenario-list">
+        <li><span class="q-mark">?</span><span>What kind of dog breed would suit a small apartment with limited outdoor space?</span></li>
+        <li><span class="q-mark">?</span><span>How do I find out whether a specific pet is available for adoption or for purchase, and how do I contact Pet Haven about it?</span></li>
+        <li><span class="q-mark">?</span><span>What basic feeding and care does a new kitten need during its first few weeks at home?</span></li>
+      </ul>
+    </section>
+
+    <!-- COLOR SCHEME -->
+    <section class="plan-section" aria-labelledby="color-heading">
+      <p class="plan-section__label">Palette</p>
+      <h2 id="color-heading">Color Scheme</h2>
+      <p>Pet Haven uses a warm, natural palette meant to feel calm and caretaking rather than flashy — like a well-kept animal shelter, not a big-box retailer. This document is styled using this exact palette.</p>
+      <div class="swatch-grid">
+        <div class="swatch">
+          <div class="swatch__color" style="background:#1F3D2B;"></div>
+          <div class="swatch__meta"><strong>Forest</strong><span class="hex">#1F3D2B</span><span class="usage">Headings, header, footer</span></div>
+        </div>
+        <div class="swatch">
+          <div class="swatch__color" style="background:#E8A33D;"></div>
+          <div class="swatch__meta"><strong>Marigold</strong><span class="hex">#E8A33D</span><span class="usage">Accents, links, section markers</span></div>
+        </div>
+        <div class="swatch">
+          <div class="swatch__color" style="background:#F2F6F1;"></div>
+          <div class="swatch__meta"><strong>Sage</strong><span class="hex">#F2F6F1</span><span class="usage">Page background</span></div>
+        </div>
+        <div class="swatch">
+          <div class="swatch__color" style="background:#2B2B2B;"></div>
+          <div class="swatch__meta"><strong>Charcoal</strong><span class="hex">#2B2B2B</span><span class="usage">Body text</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TYPOGRAPHY -->
+    <section class="plan-section" aria-labelledby="type-heading">
+      <p class="plan-section__label">Typography</p>
+      <h2 id="type-heading">Typography</h2>
+      <p>Two typefaces are used, matching the friendly-but-trustworthy tone of the brand. Both are applied on this document itself.</p>
+      <div class="type-sample type-sample--display">
+        <p class="type-sample__label">Baloo 2 — headings</p>
+        <p>Every pet deserves a happy home.</p>
+      </div>
+      <div class="type-sample type-sample--body">
+        <p class="type-sample__label">Nunito Sans — body copy</p>
+        <p>Browse available pets, read species-specific care guides, and reach out to our team when you're ready to adopt.</p>
+      </div>
+    </section>
+
+    <!-- WIREFRAME -->
+    <section class="plan-section" aria-labelledby="wireframe-heading">
+      <p class="plan-section__label">Layout</p>
+      <h2 id="wireframe-heading">Wireframe</h2>
+      <p>Home page structure for a small viewport (phone) and a wider viewport (tablet/desktop): logo and nav, an intro/hero area, a grid of featured pets, and a footer with contact details.</p>
+      <div class="wireframe-grid">
+        <figure class="wireframe-card wireframe-card--mobile">
+          <div class="wireframe-card__frame">
+            <p>Small viewport<br />sketch goes here</p>
+          </div>
+          <figcaption>Mobile layout</figcaption>
+        </figure>
+        <figure class="wireframe-card wireframe-card--desktop">
+          <div class="wireframe-card__frame">
+            <p>Wide viewport sketch goes here</p>
+          </div>
+          <figcaption>Tablet / desktop layout</figcaption>
+        </figure>
+      </div>
+      <div class="plan-note">
+        <strong>Note:</strong> the boxes above are placeholders only. Per the assignment instructions, the wireframe must be your own hand-drawn sketch (photographed or scanned) — an AI- or tool-generated wireframe is not acceptable. Replace each placeholder with an <code>&lt;img&gt;</code> of your sketch before submitting.
+      </div>
+    </section>
+
+    <!-- NUMBER OF PAGES -->
+    <section class="plan-section" aria-labelledby="pages-heading">
+      <p class="plan-section__label">Site structure</p>
+      <h2 id="pages-heading">Number of Pages</h2>
+      <p>Pet Haven will be built with <strong>5 pages</strong>, which is sufficient to cover each scenario of the target audience without multiplying clicks or diluting the content:</p>
+      <ul class="scenario-list">
+        <li><span class="q-mark">1</span><span><strong>Home</strong> — presentation, featured pets, quick access to other pages</span></li>
+        <li><span class="q-mark">2</span><span><strong>Available Pets</strong> — dynamic catalog (JSON) of pets for adoption or sale, with filters</span></li>
+        <li><span class="q-mark">3</span><span><strong>Care Guides</strong> — care tips by species (feeding, health, behavior)</span></li>
+        <li><span class="q-mark">4</span><span><strong>Adoption / Contact</strong> — adoption request form and store contact information</span></li>
+        <li><span class="q-mark">5</span><span><strong>Attributions</strong> — sources of images, data, and fonts used on the site</span></li>
+      </ul>
+      <div class="plan-note">
+        <strong>Why 5 instead of 4:</strong> a separate attributions page is generally required for the final project of the course, and separating « Available Pets » from « Adoption / Contact » avoids mixing content that is consulted (the catalog) with content that is filled out (the form).
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>Pet Haven Site Plan · WDD 231 · Built by Marc-Doodley SEMETUS</p>
+  </footer>
+</body>
+</html>
