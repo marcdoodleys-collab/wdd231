@@ -1,0 +1,157 @@
+/* ===== DISCOVER INTRO & VISIT MESSAGE ===== */
+.discover-intro {
+  max-width: 60ch;
+  margin: 0 auto 1.5rem;
+}
+
+.visit-message {
+  margin-top: 0.75rem;
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
+  background-color: #eef6f0;
+  border-left: 4px solid #2f7d4f;
+  font-weight: 600;
+}
+
+/* ===== DISCOVER GRID — SMALL SCREENS (320px–640px) ===== */
+/* Single column stack, one named area per card */
+.discover-grid {
+  display: grid;
+  gap: 1.25rem;
+  padding: 0 1rem 2rem;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "card1"
+    "card2"
+    "card3"
+    "card4"
+    "card5"
+    "card6"
+    "card7"
+    "card8";
+}
+
+.discover-card.card-1 { grid-area: card1; }
+.discover-card.card-2 { grid-area: card2; }
+.discover-card.card-3 { grid-area: card3; }
+.discover-card.card-4 { grid-area: card4; }
+.discover-card.card-5 { grid-area: card5; }
+.discover-card.card-6 { grid-area: card6; }
+.discover-card.card-7 { grid-area: card7; }
+.discover-card.card-8 { grid-area: card8; }
+
+/* ===== CARD STYLING (all breakpoints) ===== */
+.discover-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+
+.discover-card h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.05rem;
+  margin: 0.75rem 1rem 0.25rem;
+}
+
+.discover-card figure {
+  margin: 0;
+  overflow: hidden;
+  background-color: #ddd;
+}
+
+.discover-card img {
+  display: block;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.discover-card address {
+  font-style: normal;
+  font-size: 0.85rem;
+  color: #555;
+  margin: 0.5rem 1rem 0;
+}
+
+.discover-card p {
+  font-size: 0.9rem;
+  margin: 0.5rem 1rem 1rem;
+  flex-grow: 1;
+}
+
+.discover-card .learn-more-btn {
+  margin: 0 1rem 1rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.4rem;
+  background-color: #2f7d4f;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+.discover-card .learn-more-btn:hover {
+  background-color: #24623d;
+}
+
+/* ===== MEDIUM SCREENS (641px–1024px) ===== */
+/* Two columns with a featured top card and a featured bottom card —
+   a genuinely different arrangement, not just an extra column. */
+@media (min-width: 641px) {
+  .discover-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "card1 card1"
+      "card2 card3"
+      "card4 card5"
+      "card6 card7"
+      "card8 card8";
+  }
+
+  .discover-card.card-1 img,
+  .discover-card.card-8 img {
+    height: 260px;
+  }
+
+  /* Image hover effect — desktop/tablet only, never on mobile */
+  .discover-card img {
+    transition: transform 0.35s ease, filter 0.35s ease;
+  }
+
+  .discover-card:hover img {
+    transform: scale(1.06);
+    filter: brightness(1.05);
+  }
+}
+
+/* ===== LARGE SCREENS (1025px and above) ===== */
+/* Four-column mosaic with card1 as a large feature block and
+   card8 spanning the bottom row — distinct from the medium layout. */
+@media (min-width: 1025px) {
+  .discover-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+      "card1 card1 card2 card3"
+      "card1 card1 card4 card5"
+      "card6 card7 card8 card8";
+  }
+
+  .discover-card.card-1 {
+    display: grid;
+    grid-template-rows: auto 1fr;
+  }
+
+  .discover-card.card-1 figure {
+    height: 100%;
+  }
+
+  .discover-card.card-1 img {
+    height: 100%;
+  }
+}
