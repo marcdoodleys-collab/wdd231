@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adoption &amp; Contact — Pet Haven</title>
+  <meta name="description" content="Faites une demande d'adoption ou posez une question à l'équipe Pet Haven via ce formulaire de contact." />
+  <meta name="author" content="Marc-Doodley Sémétus" />
+  <meta property="og:title" content="Adoption & Contact — Pet Haven" />
+  <meta property="og:description" content="Formulaire de contact pour toute demande d'adoption ou question sur nos animaux." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://example.github.io/wdd231/finalproject/contact.html" />
+  <meta property="og:image" content="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/pets.css" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Aller au contenu principal</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html">
+        <svg class="brand__mark" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="32" cy="32" r="31" fill="#e8a33d" />
+          <ellipse cx="32" cy="40" rx="14" ry="11" fill="#1f3d2b" />
+          <ellipse cx="18" cy="24" rx="6" ry="7.5" fill="#1f3d2b" />
+          <ellipse cx="46" cy="24" rx="6" ry="7.5" fill="#1f3d2b" />
+          <ellipse cx="24.5" cy="14.5" rx="5" ry="6.2" fill="#1f3d2b" />
+          <ellipse cx="39.5" cy="14.5" rx="5" ry="6.2" fill="#1f3d2b" />
+        </svg>
+        <span class="brand__name">Pet Haven</span>
+      </a>
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-list" aria-label="Ouvrir le menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav" aria-label="Navigation principale">
+        <ul id="nav-list">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="pets.html">Animaux</a></li>
+          <li><a href="contact.html" aria-current="page">Adoption / Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="page-hero">
+      <div class="wrap">
+        <h1>Adoption &amp; Contact</h1>
+        <p>Une question sur un animal en particulier, ou prêt à entamer une demande d'adoption ? Écrivez-nous.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-label="Formulaire de contact">
+      <div class="wrap">
+        <div class="contact-layout">
+          <form class="contact-form" id="contact-form" action="action.html" method="get">
+            <div class="form-field">
+              <label for="name">Nom complet</label>
+              <input type="text" id="name" name="name" required autocomplete="name" />
+            </div>
+            <div class="form-field">
+              <label for="email">Courriel</label>
+              <input type="email" id="email" name="email" required autocomplete="email" />
+            </div>
+            <div class="form-field">
+              <label for="pet">Animal qui vous intéresse (optionnel)</label>
+              <input type="text" id="pet" name="pet" placeholder="Ex. Bella" />
+            </div>
+            <div class="form-field">
+              <label for="reason">Raison du contact</label>
+              <select id="reason" name="reason" required>
+                <option value="">Choisissez une option</option>
+                <option value="Demande d'adoption">Demande d'adoption</option>
+                <option value="Question sur un achat">Question sur un achat</option>
+                <option value="Question sur les soins">Question sur les soins</option>
+                <option value="Autre">Autre</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+            <p class="form-note">En envoyant ce formulaire, vous serez redirigé vers une page récapitulant les informations transmises.</p>
+            <button class="btn btn--primary" type="submit">Envoyer</button>
+          </form>
+
+          <aside class="contact-info" aria-label="Coordonnées de la boutique">
+            <h2>Nous trouver</h2>
+            <dl>
+              <dt>Adresse</dt>
+              <dd>12 Rue des Animaux, Port-au-Prince, Haïti</dd>
+              <dt>Téléphone</dt>
+              <dd><a href="tel:+50912345678">+509 1234 5678</a></dd>
+              <dt>Courriel</dt>
+              <dd><a href="mailto:contact@pethaven.org">contact@pethaven.org</a></dd>
+              <dt>Heures d'ouverture</dt>
+              <dd>Lundi–Samedi, 9h–17h</dd>
+            </dl>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>Pet Haven · WDD 231 · Marc-Doodley Sémétus</p>
+      <nav aria-label="Navigation de pied de page">
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="pets.html">Animaux</a></li>
+          <li><a href="attributions.html">Attributions</a></li>
+          <li><a href="https://example.com/video-demo" target="_blank" rel="noopener">Vidéo de démonstration</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <script type="module" src="scripts/main.js"></script>
+</body>
+</html>

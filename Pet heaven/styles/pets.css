@@ -1,0 +1,717 @@
+/* ============================================
+   Pet Haven — WDD 231 Final Project
+   ============================================ */
+
+:root {
+  --forest: #1f3d2b;
+  --marigold: #e8a33d;
+  --rust: #a8442d;
+  --cream: #fbf8f2;
+  --sage: #f2f6f1;
+  --sage-deep: #e3ebe1;
+  --charcoal: #2b2b2b;
+  --paper: #ffffff;
+
+  --font-display: "Baloo 2", "Segoe UI", system-ui, sans-serif;
+  --font-body: "Nunito Sans", "Segoe UI", system-ui, sans-serif;
+
+  --radius: 0.5rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--charcoal);
+  background-color: var(--sage);
+  line-height: 1.65;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+a {
+  color: var(--forest);
+}
+
+a:hover,
+a:focus-visible {
+  color: var(--marigold);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  color: var(--forest);
+  line-height: 1.2;
+  margin-top: 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.wrap {
+  max-width: 62rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  background: var(--marigold);
+  color: var(--forest);
+  padding: 0.75rem 1.25rem;
+  font-weight: 700;
+  z-index: 200;
+}
+
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+}
+
+/* ---------- Header / responsive nav ---------- */
+.site-header {
+  background-color: var(--forest);
+  color: var(--sage);
+  position: relative;
+}
+
+.site-header .wrap {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  text-decoration: none;
+}
+
+.brand__mark {
+  width: 2.25rem;
+  height: 2.25rem;
+  flex-shrink: 0;
+}
+
+.brand__name {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  color: var(--paper);
+}
+
+.nav-toggle {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  width: 2.4rem;
+  height: 2.4rem;
+  background: transparent;
+  border: 1px solid rgba(242, 246, 241, 0.4);
+  border-radius: 0.35rem;
+  cursor: pointer;
+}
+
+.nav-toggle span {
+  width: 1.3rem;
+  height: 2px;
+  background: var(--sage);
+  display: block;
+}
+
+.site-nav {
+  width: 100%;
+}
+
+.site-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0.75rem 0 0.25rem;
+  display: none;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.site-nav ul.is-open {
+  display: flex;
+}
+
+.site-nav a {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  color: var(--sage);
+  text-decoration: none;
+  padding: 0.55rem 0.2rem;
+  border-radius: 0.3rem;
+}
+
+.site-nav a:hover,
+.site-nav a:focus-visible {
+  color: var(--paper);
+}
+
+.site-nav a[aria-current="page"] {
+  color: var(--forest);
+  background: var(--marigold);
+  padding-left: 0.6rem;
+}
+
+@media (min-width: 700px) {
+  .nav-toggle {
+    display: none;
+  }
+
+  .site-header .wrap {
+    flex-wrap: nowrap;
+  }
+
+  .site-nav {
+    width: auto;
+  }
+
+  .site-nav ul {
+    display: flex !important;
+    flex-direction: row;
+    padding: 0;
+    gap: 0.25rem;
+  }
+
+  .site-nav a[aria-current="page"] {
+    padding-left: 0.75rem;
+  }
+}
+
+/* ---------- Page hero ---------- */
+.page-hero {
+  padding: 2.5rem 0 0.5rem;
+}
+
+.page-hero h1 {
+  font-size: clamp(1.6rem, 3.4vw, 2.2rem);
+  margin-bottom: 0.5rem;
+}
+
+.page-hero p {
+  max-width: 42rem;
+  color: var(--charcoal);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  text-decoration: none;
+  padding: 0.65rem 1.2rem;
+  border-radius: 999px;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+.btn--primary {
+  background: var(--marigold);
+  color: var(--forest);
+}
+
+.btn--primary:hover,
+.btn--primary:focus-visible {
+  background: var(--forest);
+  color: var(--paper);
+}
+
+.btn--secondary {
+  background: transparent;
+  color: var(--forest);
+  border-color: var(--forest);
+}
+
+.btn--secondary:hover,
+.btn--secondary:focus-visible {
+  background: var(--forest);
+  color: var(--paper);
+}
+
+/* ---------- Sections / two-column layouts ---------- */
+main {
+  flex: 1;
+}
+
+.section {
+  padding: 2rem 0;
+}
+
+.section h2 {
+  font-size: 1.35rem;
+  margin-bottom: 0.4rem;
+}
+
+.section-lede {
+  max-width: 42rem;
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+}
+
+.home-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+@media (max-width: 700px) {
+  .home-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.stat-card {
+  background: var(--forest);
+  color: var(--sage);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.4rem;
+}
+
+.stat-card strong {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  color: var(--marigold);
+  display: block;
+}
+
+/* ---------- Filter bar ---------- */
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  align-items: flex-end;
+  background: var(--cream);
+  border: 1px solid var(--sage-deep);
+  border-radius: var(--radius);
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.filter-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.filter-field label {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  color: var(--forest);
+}
+
+.filter-field select {
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  padding: 0.45rem 0.6rem;
+  border-radius: 0.35rem;
+  border: 1px solid var(--sage-deep);
+  background: var(--paper);
+  color: var(--charcoal);
+  min-width: 9rem;
+}
+
+.filter-count {
+  font-size: 0.85rem;
+  color: var(--charcoal);
+  opacity: 0.75;
+}
+
+/* ---------- Pet cards ---------- */
+.pet-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(14.5rem, 1fr));
+  gap: 1.25rem;
+}
+
+.pet-card {
+  background: var(--cream);
+  border: 1px solid var(--sage-deep);
+  border-radius: var(--radius);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.pet-card__media {
+  background: var(--sage-deep);
+  padding: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  position: relative;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+}
+
+.pet-card__media img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pet-card__media img.pet-card__media--fallback {
+  object-fit: contain;
+  padding: 1.1rem;
+  background: var(--sage-deep);
+}
+
+.fav-btn {
+  position: relative;
+  z-index: 1;
+  margin: 0.6rem;
+  background: var(--paper);
+  border: 1px solid var(--sage-deep);
+  border-radius: 999px;
+  width: 2.1rem;
+  height: 2.1rem;
+  font-size: 1.05rem;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.fav-btn[aria-pressed="true"] {
+  background: var(--marigold);
+  border-color: var(--marigold);
+}
+
+.pet-card__body {
+  padding: 0.9rem 1.1rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  flex: 1;
+}
+
+.pet-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.pet-card__top h3 {
+  font-size: 1.05rem;
+  margin: 0;
+}
+
+.badge {
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  color: var(--paper);
+  white-space: nowrap;
+}
+
+.badge--adoption {
+  background: var(--forest);
+}
+
+.badge--vente {
+  background: var(--rust);
+}
+
+.pet-card__meta {
+  font-size: 0.82rem;
+  color: var(--charcoal);
+  opacity: 0.85;
+  margin: 0;
+}
+
+.pet-card__cta {
+  align-self: flex-start;
+  margin-top: 0.2rem;
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  color: var(--forest);
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid var(--marigold);
+  padding: 0;
+  cursor: pointer;
+}
+
+.pet-card__cta:hover,
+.pet-card__cta:focus-visible {
+  color: var(--marigold);
+}
+
+.empty-state {
+  font-family: var(--font-display);
+  color: var(--forest);
+  background: var(--cream);
+  border: 1px dashed var(--sage-deep);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  text-align: center;
+}
+
+/* ---------- Modal dialog ---------- */
+dialog#pet-modal {
+  border: none;
+  border-radius: var(--radius);
+  padding: 0;
+  max-width: 26rem;
+  width: 90%;
+  background: var(--cream);
+}
+
+dialog#pet-modal::backdrop {
+  background: rgba(18, 38, 26, 0.55);
+}
+
+.modal-content {
+  padding: 1.5rem 1.6rem 1.7rem;
+}
+
+.modal-content__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.modal-photo {
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 0.4rem;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.modal-close {
+  background: var(--sage);
+  border: none;
+  border-radius: 999px;
+  width: 2rem;
+  height: 2rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  color: var(--forest);
+}
+
+.modal-tip {
+  background: var(--sage);
+  border-left: 3px solid var(--marigold);
+  border-radius: 0.35rem;
+  padding: 0.75rem 0.9rem;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+/* ---------- Care tips (home page) ---------- */
+.care-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: 1rem;
+}
+
+.care-card {
+  background: var(--cream);
+  border: 1px solid var(--sage-deep);
+  border-left: 3px solid var(--marigold);
+  border-radius: var(--radius);
+  padding: 1rem 1.2rem;
+}
+
+.care-card h3 {
+  font-size: 1rem;
+  margin-bottom: 0.4rem;
+}
+
+.care-card p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* ---------- Contact form ---------- */
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+@media (max-width: 720px) {
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.contact-form {
+  background: var(--cream);
+  border: 1px solid var(--sage-deep);
+  border-radius: var(--radius);
+  padding: 1.5rem 1.6rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.form-field {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.form-field label {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  color: var(--forest);
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  padding: 0.55rem 0.7rem;
+  border-radius: 0.35rem;
+  border: 1px solid var(--sage-deep);
+  background: var(--paper);
+  color: var(--charcoal);
+}
+
+.form-field textarea {
+  resize: vertical;
+  min-height: 6.5rem;
+}
+
+.form-note {
+  font-size: 0.8rem;
+  color: var(--charcoal);
+  opacity: 0.75;
+  margin: 0;
+}
+
+.contact-info {
+  background: var(--forest);
+  color: var(--sage);
+  border-radius: var(--radius);
+  padding: 1.5rem 1.6rem;
+}
+
+.contact-info h2 {
+  color: var(--paper);
+  font-size: 1.15rem;
+}
+
+.contact-info dl {
+  margin: 1rem 0 0;
+}
+
+.contact-info dt {
+  font-family: var(--font-display);
+  color: var(--marigold);
+  font-size: 0.85rem;
+  margin-top: 0.85rem;
+}
+
+.contact-info dt:first-child {
+  margin-top: 0;
+}
+
+.contact-info dd {
+  margin: 0.15rem 0 0;
+}
+
+.contact-info a {
+  color: var(--paper);
+}
+
+.contact-info a:hover,
+.contact-info a:focus-visible {
+  color: var(--marigold);
+}
+
+/* ---------- Form action page ---------- */
+.summary-card {
+  background: var(--cream);
+  border: 1px solid var(--sage-deep);
+  border-radius: var(--radius);
+  padding: 1.5rem 1.7rem;
+  max-width: 34rem;
+}
+
+.summary-card dt {
+  font-family: var(--font-display);
+  color: var(--marigold);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  margin-top: 0.9rem;
+}
+
+.summary-card dt:first-child {
+  margin-top: 0;
+}
+
+.summary-card dd {
+  margin: 0.15rem 0 0;
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  background: var(--forest);
+  color: var(--sage);
+  margin-top: 2rem;
+}
+
+.site-footer .wrap {
+  padding: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.85rem;
+}
+
+.site-footer nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.site-footer a {
+  color: var(--marigold);
+}
+
+/* ---------- Attributions (unstyled per assignment, minimal only) ---------- */
+.plain-page {
+  font-family: sans-serif;
+  padding: 1.5rem;
+  max-width: 40rem;
+  margin: 0 auto;
+}

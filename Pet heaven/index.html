@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pet Haven — Adoptez, achetez et prenez soin de vos animaux</title>
+  <meta name="description" content="Pet Haven vous aide à trouver le bon compagnon animal et à en prendre soin : catalogue d'animaux, conseils de base et prise de contact." />
+  <meta name="author" content="Marc-Doodley Sémétus" />
+  <meta property="og:title" content="Pet Haven — Adoptez, achetez et prenez soin de vos animaux" />
+  <meta property="og:description" content="Catalogue d'animaux à l'adoption ou à la vente, conseils de soins et formulaire de contact." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://example.github.io/wdd231/finalproject/index.html" />
+  <meta property="og:image" content="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/pets.css" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Aller au contenu principal</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html">
+        <svg class="brand__mark" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="32" cy="32" r="31" fill="#e8a33d" />
+          <ellipse cx="32" cy="40" rx="14" ry="11" fill="#1f3d2b" />
+          <ellipse cx="18" cy="24" rx="6" ry="7.5" fill="#1f3d2b" />
+          <ellipse cx="46" cy="24" rx="6" ry="7.5" fill="#1f3d2b" />
+          <ellipse cx="24.5" cy="14.5" rx="5" ry="6.2" fill="#1f3d2b" />
+          <ellipse cx="39.5" cy="14.5" rx="5" ry="6.2" fill="#1f3d2b" />
+        </svg>
+        <span class="brand__name">Pet Haven</span>
+      </a>
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-list" aria-label="Ouvrir le menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav" aria-label="Navigation principale">
+        <ul id="nav-list">
+          <li><a href="index.html" aria-current="page">Accueil</a></li>
+          <li><a href="pets.html">Animaux</a></li>
+          <li><a href="contact.html">Adoption / Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="page-hero">
+      <div class="wrap">
+        <h1>Un foyer pour chaque animal</h1>
+        <p>Pet Haven réunit les animaux disponibles à l'adoption ou à la vente, quelques conseils de soins essentiels, et un moyen simple de nous contacter.</p>
+        <div class="hero-actions">
+          <a class="btn btn--primary" href="pets.html">Voir les animaux disponibles</a>
+          <a class="btn btn--secondary" href="contact.html">Nous contacter</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="featured-heading">
+      <div class="wrap">
+        <div class="home-grid">
+          <div>
+            <h2 id="featured-heading">Coups de cœur du moment</h2>
+            <p class="section-lede">Un aperçu de quelques animaux actuellement disponibles chez Pet Haven.</p>
+            <div class="pet-grid" id="featured-grid">
+              <p class="empty-state">Chargement des animaux…</p>
+            </div>
+          </div>
+          <div class="stat-card">
+            <strong id="favorites-count">0</strong>
+            <span>animal(aux) dans vos favoris</span>
+            <p style="margin-top:0.75rem; font-size:0.85rem;">Cliquez sur le cœur d'une fiche animal pour l'ajouter à vos favoris — votre sélection reste enregistrée sur cet appareil.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="care-heading">
+      <div class="wrap">
+        <h2 id="care-heading">Conseils de soins express</h2>
+        <p class="section-lede">Quelques repères rapides avant d'accueillir un nouvel animal — le détail complet est aussi disponible sur chaque fiche du catalogue.</p>
+        <div class="care-grid">
+          <article class="care-card">
+            <h3>Chiens &amp; chats</h3>
+            <p>Alimentation adaptée à l'âge, eau fraîche disponible en permanence, et un suivi vétérinaire régulier.</p>
+          </article>
+          <article class="care-card">
+            <h3>Lapins &amp; rongeurs</h3>
+            <p>Du foin à volonté, une cage spacieuse et des sorties quotidiennes surveillées.</p>
+          </article>
+          <article class="care-card">
+            <h3>Oiseaux</h3>
+            <p>Une cage assez grande pour voler un peu, et des interactions sociales fréquentes.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>Pet Haven · WDD 231 · Marc-Doodley Sémétus</p>
+      <nav aria-label="Navigation de pied de page">
+        <ul>
+          <li><a href="pets.html">Animaux</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="attributions.html">Attributions</a></li>
+          <li><a href="https://example.com/video-demo" target="_blank" rel="noopener">Vidéo de démonstration</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <script type="module" src="scripts/main.js"></script>
+</body>
+</html>
